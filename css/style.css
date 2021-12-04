@@ -213,12 +213,12 @@ a > .accent {
 .features.container {
   display: flex;
 }
+.features.container > .item {
+  flex-basis: 270px;
+}
 .features-icon-list > .item:not(:last-child),
 .features.container > .item:not(:last-child) {
   margin-right: 30px;
-}
-.features.container > .item {
-  flex-basis: 270px;
 }
 
 .features-title {
