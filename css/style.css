@@ -195,16 +195,32 @@ a > .accent {
     url(../images/background.jpg);
 }
 /*Особенности*/
+
+.features-icon-list {
+  display: flex;
+}
+.features-icon-list > .item {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-bottom: 30px;
+  padding: 25px 100px;
+
+  background-color: var(--background-color);
+}
+.features-icon {
+  width: 70px;
+  height: 70px;
+}
 .features.container {
   display: flex;
 }
-.features.container > .item {
-  flex-basis: calc(100% / 4 - 30px);
-}
-
+.features-icon-list > .item:not(:last-child),
 .features.container > .item:not(:last-child) {
   margin-right: 30px;
 }
+.features.container > .item {
+  flex-basis: 270px;
+}
+
 .features-title {
   color: var(--title-text-color);
   font-weight: 700;
