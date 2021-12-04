@@ -200,21 +200,20 @@ a > .accent {
   display: flex;
 }
 .features-icon-list > .item {
-  flex-basis: calc(100% / 4 - 30px);
   margin-bottom: 30px;
   padding: 25px 100px;
 
   background-color: var(--background-color);
 }
 .features-icon {
-  width: 70px;
-  height: 70px;
+  max-width: 70px;
+  max-height: 70px;
 }
 .features.container {
   display: flex;
 }
 .features.container > .item {
-  flex-basis: 270px;
+  flex-basis: calc(100% / 4 - 30px);
 }
 .features-icon-list > .item:not(:last-child),
 .features.container > .item:not(:last-child) {
@@ -281,7 +280,8 @@ a > .accent {
   color: var(--title-text-color);
 }
 .team-members-position {
-  margin-top: 0;
+  margin-top: 0px;
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -289,7 +289,31 @@ a > .accent {
 .team.section {
   background-color: var(--background-color);
 }
-
+/* Наша команда - иконки соцсетей */
+.socials {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+.socials > .point:not(:last-child) {
+  margin-right: 10px;
+}
+.socials .link {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 50%;
+}
+.socials-icon {
+  fill: rgba(175, 177, 184, 1);
+}
+.socials .link:hover .socials-icon {
+  fill: var(--white);
+}
+.socials .link:hover {
+  background-color: var(--accent-color);
+}
 /* Фильтры в Портфолио */
 .portfolio-section {
   padding-top: 94px;
