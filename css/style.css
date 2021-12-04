@@ -15,6 +15,7 @@
   --portfolio-card-margin: 30px;
   --fotter-contacts-color: rgba(255, 255, 255, 0.6);
   --hero-background-shadow: rgba(47, 48, 58, 0, 4);
+  --icons-primary-color: rgba(175, 177, 184, 1);
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -200,7 +201,8 @@ a > .accent {
   display: flex;
 }
 .features-icon-list > .item {
-  flex-basis: 270px;
+  flex-basis: calc(100% / 4 - 30px);
+  flex-grow: 1;
   margin-bottom: 30px;
   padding: 25px 100px;
 
@@ -214,7 +216,8 @@ a > .accent {
   display: flex;
 }
 .features.container > .item {
-  flex-basis: 270px;
+  flex-basis: calc(100% / 4 - 30px);
+  flex-grow: 1;
 }
 .features-icon-list > .item:not(:last-child),
 .features.container > .item:not(:last-child) {
@@ -237,7 +240,8 @@ a > .accent {
 
 /* Заголовки секций */
 .projects-section-title,
-.team-section-title {
+.team-section-title,
+.clients-section-title {
   margin-bottom: 50px;
 
   color: var(--title-text-color);
@@ -314,14 +318,48 @@ a > .accent {
 }
 
 .socials-icon {
-  fill: rgba(175, 177, 184, 1);
+  fill: var(--icons-primary-color);
 }
-.socials .link:hover .socials-icon {
+.socials .link:hover .socials-icon,
+.socials .link:focus .socials-icon {
   fill: var(--white);
 }
 .footer-socials .link:hover,
-.socials .link:hover {
+.socials .link:hover,
+.footer-socials .link:focus,
+.socials .link:focus {
   background-color: var(--accent-color);
+}
+
+/* Секция наши клиенты */
+
+.clients-list {
+  margin: 0;
+
+  display: flex;
+  justify-content: space-between;
+}
+.clients-icon {
+  max-width: 106px;
+  max-height: 60px;
+
+  fill: var(--icons-primary-color);
+}
+.clients-list .link:hover .clients-icon,
+.clients-list .link:focus .clients-icon {
+  fill: var(--accent-color);
+}
+.clients-list .link:hover,
+.clients-list .link:focus {
+  border: 1px solid var(--accent-color);
+}
+.clients-list .link {
+  padding: 16px 32px;
+
+  display: block;
+
+  border: 1px solid var(--icons-primary-color);
+  border-radius: 4px;
 }
 /* Фильтры в Портфолио */
 .portfolio-section {
@@ -409,6 +447,7 @@ a > .accent {
   padding: 20px 24px;
   border: 1px solid rgba(238, 238, 238, 1);
 }
+
 /* ФУТЕР */
 .logo.footer {
   color: var(--white);
@@ -458,8 +497,6 @@ address {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white);
-  -webkit-text-stroke: 1px black;
-  -webkit-text-fill-color: white;
 }
 
 .footer-socials {
