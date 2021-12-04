@@ -334,6 +334,7 @@ a > .accent {
 
 .clients-list {
   margin: 0;
+  padding: 0;
 
   display: flex;
   justify-content: space-between;
@@ -361,11 +362,13 @@ a > .accent {
 }
 .clients-list .link {
   display: flex;
-  height: 100%;
+  width: inherit;
+  height: inherit;
 
   justify-content: center;
   align-items: center;
 }
+
 /* Фильтры в Портфолио */
 .portfolio-section {
   padding-top: 94px;
