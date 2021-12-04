@@ -200,6 +200,7 @@ a > .accent {
   display: flex;
 }
 .features-icon-list > .item {
+  flex-basis: 270px;
   margin-bottom: 30px;
   padding: 25px 100px;
 
@@ -213,7 +214,7 @@ a > .accent {
   display: flex;
 }
 .features.container > .item {
-  flex-basis: calc(100% / 4 - 30px);
+  flex-basis: 270px;
 }
 .features-icon-list > .item:not(:last-child),
 .features.container > .item:not(:last-child) {
@@ -289,28 +290,36 @@ a > .accent {
 .team.section {
   background-color: var(--background-color);
 }
-/* Наша команда - иконки соцсетей */
+/* Наша команда + футер - иконки соцсетей */
+.footer-socials,
 .socials {
   margin-left: auto;
   margin-right: auto;
+
   display: flex;
   justify-content: center;
 }
+.footer-socials > .item:not(:last-child),
 .socials > .point:not(:last-child) {
   margin-right: 10px;
 }
+.footer-socials .link,
 .socials .link {
+  padding: 12px;
+
   display: flex;
   align-items: center;
-  padding: 12px;
+
   border-radius: 50%;
 }
+
 .socials-icon {
   fill: rgba(175, 177, 184, 1);
 }
 .socials .link:hover .socials-icon {
   fill: var(--white);
 }
+.footer-socials .link:hover,
 .socials .link:hover {
   background-color: var(--accent-color);
 }
@@ -438,4 +447,35 @@ address {
 .footer-data {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+/* Иконки соц сетей в футере */
+.footer-socials-title {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white);
+  -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: white;
+}
+
+.footer-socials {
+  margin: 0;
+}
+.footer-socials-icon {
+  fill: var(--white);
+}
+
+.footer-socials .link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-flex {
+  display: flex;
+  align-items: baseline;
+}
+.footer-contacts-wrapper {
+  margin-right: 70px;
 }
