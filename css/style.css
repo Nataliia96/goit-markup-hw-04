@@ -197,14 +197,14 @@ a > .accent {
 }
 /*Особенности*/
 
-.features-icon-list {
-  display: flex;
-}
-.features-icon-list > .item {
-  flex-basis: calc(100% / 4 - 30px);
-  flex-grow: 1;
+.features-icons-wrapper {
+  width: 270px;
+  height: 120px;
   margin-bottom: 30px;
-  padding: 25px 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   background-color: var(--background-color);
 }
@@ -219,7 +219,6 @@ a > .accent {
   flex-basis: calc(100% / 4 - 30px);
   flex-grow: 1;
 }
-.features-icon-list > .item:not(:last-child),
 .features.container > .item:not(:last-child) {
   margin-right: 30px;
 }
@@ -340,8 +339,8 @@ a > .accent {
   justify-content: space-between;
 }
 .clients-icon {
-  max-width: 106px;
-  max-height: 60px;
+  width: 106px;
+  height: 60px;
 
   fill: var(--icons-primary-color);
 }
@@ -353,13 +352,21 @@ a > .accent {
 .clients-list .link:focus {
   border: 1px solid var(--accent-color);
 }
-.clients-list .link {
-  padding: 16px 32px;
+.clients-list .item {
+  width: 170px;
+  height: 92px;
 
-  display: block;
+  display: flex;
 
   border: 1px solid var(--icons-primary-color);
   border-radius: 4px;
+}
+.clients-list .link {
+  display: flex;
+  width: 100%;
+
+  justify-content: center;
+  align-items: center;
 }
 /* Фильтры в Портфолио */
 .portfolio-section {
